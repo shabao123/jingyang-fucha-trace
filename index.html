@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泾阳茯茶溯源详情</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+        }
+        .header {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .trace-code {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        .chain-status {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .section {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .section-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #8B4513;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title::before {
+            content: "";
+            width: 6px;
+            height: 24px;
+            background: #8B4513;
+            margin-right: 12px;
+            border-radius: 3px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px 12px;
+            font-size: 16px;
+        }
+        .info-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .info-label {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        .info-value {
+            color: #333;
+            font-weight: 500;
+        }
+        .process-item {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .process-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #8B4513;
+            margin-bottom: 12px;
+        }
+        .process-desc {
+            font-size: 16px;
+            color: #555;
+            margin-left: 16px;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        .footer {
+            padding: 24px 20px;
+            text-align: center;
+            background: #fafafa;
+        }
+        .btn {
+            display: inline-block;
+            background: #8B4513;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-size: 16px;
+            margin: 0 8px 16px;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .hotline {
+            font-size: 14px;
+            color: #666;
+        }
+        .place-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            background: #f0f0f0;
+        }
+        .toast {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            display: none;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-title">泾阳茯茶溯源·详情查询</div>
+            <div class="trace-code">唯一溯源码：SXFC20260228FJ001</div>
+            <div class="chain-status">✅ 溯源信息已上链 | 区块链区块高度：1357924</div>
+        </div>
+
+        <div class="section">
+            <img class="place-img" src="https://images.unsplash.com/photo-1596806408266-154c56e77d6b?auto=format&fit=crop&w=800&q=80" alt="泾阳茯茶">
+            <div class="section-title">商品核心信息</div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">商品名称</div>
+                    <div class="info-value">泾阳茯茶（手筑金花茯砖）</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">生产时间</div>
+                    <div class="info-value">2026-02-28 08:30</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">包装信息</div>
+                    <div class="info-value">传统茯砖礼盒 | 1000g/块</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">产地归属</div>
+                    <div class="info-value">陕西省咸阳市泾阳县</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">销售门店</div>
+                    <div class="info-value">西安曲江茯茶体验店</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">生产批次</div>
+                    <div class="info-value">2026-SX-FC-028</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🌿 原料采购（陕南高山云雾茶）</div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">原料名称</div>
+                    <div class="info-value">陕南黑毛茶</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">原料产地</div>
+                    <div class="info-value">陕西省汉中市西乡县</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">采摘时间</div>
+                    <div class="info-value">2025-05-12 07:00</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">收购时间</div>
+                    <div class="info-value">2025-05-18 16:00</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">供应单位</div>
+                    <div class="info-value">西乡县高山生态茶叶合作社</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🏺 泾阳茯茶非遗工艺</div>
+            <div class="process-item">
+                <div class="process-title">传统茯茶制作流程</div>
+                <div class="process-desc">✅ 渥堆发酵：温度35℃，湿度75%，时长28天</div>
+                <div class="process-desc">✅ 炒制整形：温度180℃，手工翻炒成型</div>
+                <div class="process-desc">✅ 手筑压砖：人工筑制，密度均匀紧实</div>
+                <div class="process-desc">✅ 发花工艺：恒温26℃，金花菌自然生长21天</div>
+                <div class="process-desc">✅ 干燥提香：低温慢烘，茯香浓郁</div>
+                <div class="process-desc">✅ 非遗匠人：李建峰（泾阳茯茶非遗传承人）</div>
+            </div>
+            <div class="process-item">
+                <div class="process-title">品质检测（国家茯茶标准）</div>
+                <div class="process-desc">✅ 冠突散囊菌（金花）：含量达标，活性强</div>
+                <div class="process-desc">✅ 水分含量：9.2%（符合国标）</div>
+                <div class="process-desc">✅ 检测机构：陕西省茶叶质量检验中心</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🏭 生产工厂（泾阳本土）</div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">工厂名称</div>
+                    <div class="info-value">陕西泾阳茯茶股份有限公司</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">工厂地址</div>
+                    <div class="info-value">泾阳县茯茶产业园区</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">联系电话</div>
+                    <div class="info-value">029-36****89</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">上链时间</div>
+                    <div class="info-value">2026-02-28 10:20</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🚚 仓储物流环节</div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">承运司机</div>
+                    <div class="info-value">王建军</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">车牌</div>
+                    <div class="info-value">陕D·B6789</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">发货时间</div>
+                    <div class="info-value">2026-03-01 09:00</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">到货时间</div>
+                    <div class="info-value">2026-03-01 12:30</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🛒 终端门店销售</div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">门店名称</div>
+                    <div class="info-value">西安曲江茯茶体验店</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">门店地址</div>
+                    <div class="info-value">西安市曲江新区雁南三路108号</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">入库时间</div>
+                    <div class="info-value">2026-03-01 14:00</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">销售时间</div>
+                    <div class="info-value">2026-03-02 11:15</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button class="btn" onclick="showToast('打开茯茶非遗证书')">查看茯茶非遗认证</button>
+            <button class="btn" onclick="showToast('区块链验证成功 ✅')">区块链溯源验证</button>
+            <div class="hotline">陕西茯茶服务热线：029-12316</div>
+        </div>
+    </div>
+    <div class="toast" id="toast"></div>
+
+    <script>
+        function showToast(text) {
+            const toast = document.getElementById('toast');
+            toast.textContent = text;
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
